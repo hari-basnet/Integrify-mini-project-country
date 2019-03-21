@@ -2,8 +2,8 @@ body{
     max-width: 900px;
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../assets/images/brett-zeck-672527-unsplash.jpg');
     background-size: cover;
-    height: 100vh;
-    background-attachment: fixed;
+/*     height: 100vh;
+ */    background-attachment: fixed;
     background-repeat: no-repeat;
     margin: 0 auto;
 }
@@ -42,4 +42,26 @@ input{
     text-align: center;
     width: 100%;
     margin: 10px auto;
+}
+
+.result-section{
+    display: flex;
+    flex-flow: column wrap;
+
+}
+.country-div{
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 5px auto;
+    text-align: center;
+    width: 60%;
+
+}
+
+span{
+
 }
