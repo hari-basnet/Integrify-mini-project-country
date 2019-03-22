@@ -1,4 +1,3 @@
-// console.log(countries);
 // select the input from the html
 const searchBox = document.querySelector(".search-box");
 
@@ -8,21 +7,23 @@ const buttonAny = document.querySelector(".search-by-any");
 
 // add Eventlisteners to the buttons and Input
 buttonInitial.addEventListener("click", function () {
-    buttonAny.clicked == false;
-    searchBox.addEventListener("keyup", generateDiv);
+    buttonAny.classList.remove('clicked');
+    buttonInitial.classList.add('clicked');
+    //console.log(buttonInitial);
     searchBox.addEventListener("keyup", searchCountriesByInitials);
+    searchBox.addEventListener("keyup", generateDiv);
 });
 
 buttonAny.addEventListener("click", function () {
     buttonInitial.clicked == false;
     searchBox.addEventListener("keyup", generateDiv2);
-    searchBox.addEventListener("keyup", searchCountries);
+    searchBox.addEventListener("keyup", searchByAny);
 });
 
 //console.log(buttonInitial);
 
 // searchBox.addEventListener('keyup', generateDiv);
-// searchBox.addEventListener('keyup', searchCountries);
+// searchBox.addEventListener('keyup', searchByAny);
 
 // this function filters country starting with the given searchkey
 function searchCountriesByInitials() {
@@ -35,9 +36,9 @@ function searchCountriesByInitials() {
 }
 
 // this function filters country from array with any searchkey
-function searchCountries() {
+function searchByAny() {
     const searchKey = searchBox.value;
-    const pattern = new RegExp(searchKey, "gi");
+    const pattern = new RegExp(searchKey, "g");
 
     const searchResult = countries.filter(country => {
         return country.toUpperCase().match(pattern);
@@ -45,9 +46,7 @@ function searchCountries() {
     return searchResult;
 }
 
-//console.log(searchCountries());
 
-// make a function that chooses function
 let newCountries;
 
 // create a function that creates div and puts the text content
@@ -59,7 +58,7 @@ function generateDiv() {
     //console.log(resultSection);
     newCountries = searchCountriesByInitials();
 
-    newCountries.forEach(element => {
+    countries.forEach(element => {
         // start by clearing the divs
         // create new divs
         const resultDiv = document.createElement("div");
@@ -82,7 +81,7 @@ function generateDiv2() {
     // target where you wanna put the created box
     const resultSection2 = document.querySelector(".result-section");
     //console.log(resultSection);
-    newCountries = searchCountries();
+    newCountries = searchByAny();
     newCountries.forEach(element => {
         // start by clearing the divs
         // create new divs

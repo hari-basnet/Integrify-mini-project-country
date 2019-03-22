@@ -27,11 +27,22 @@ body{
 }
 
 button{
-    padding: 10px 35px;
+    background-color: #f4511e;
     border-radius: 25px;
-    margin-right: 45px;
+    color: white;
     font-size: 65%;
+    margin-right: 45px;
+    padding: 10px 35px;
+    opacity: 0.6;
+    transition: 0.3s;
+    outline-style: none;
 }
+
+    
+button:hover {
+    opacity: 1
+}
+
 .input-wrapper{
     width: 90%;
     margin: 0 auto;
