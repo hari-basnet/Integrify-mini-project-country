@@ -46,7 +46,6 @@ function searchByAny() {
     return searchResult;
 }
 
-
 let newCountries;
 
 // create a function that creates div and puts the text content
