@@ -24,12 +24,15 @@ sortButton.addEventListener("click", function() {
   countries.reverse();
   sortButton.classList.toggle("fa-sort-alpha-down");
   sortButton.classList.toggle("fa-sort-alpha-up");
-  searchCountriesByInitials();
-  // searchByAny();
-  // sortButton.classList.add("fa-sort-alpha-down");
-});
 
-console.log(sortButton);
+  if (buttonInitial.classList.contains("checked")) {
+    searchCountriesByInitials();
+  }
+
+  if (buttonAny.classList.contains("checked")) {
+    searchByAny();
+  }
+});
 
 // this function filters country starting with the given searchkey
 function searchCountriesByInitials() {
