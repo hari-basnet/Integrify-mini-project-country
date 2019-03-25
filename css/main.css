@@ -1,76 +1,83 @@
-body{
-    max-width: 900px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../assets/images/brett-zeck-672527-unsplash.jpg');
-    background-size: cover;
-/*     height: 100vh;
- */    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0 auto;
+body {
+  max-width: 900px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/brett-zeck-672527-unsplash.jpg");
+  background-size: cover;
+  /*     height: 100vh;
+ */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
-.select-this{
-    display: flex;
-    flex-flow: column wrap;
-    flex-basis: 60%;
-    justify-content: center;
-    align-items: center;
-    margin: 30px auto;
-    font-size: 180%;
-    color: whitesmoke;
-    width: 100%;
+.select-this {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 60%;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  font-size: 180%;
+  color: whitesmoke;
+  width: 100%;
 }
 
-.buttons{
-    display: flex;
-    justify-content: space-between;
-    
+.button-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-button{
-    background-color: #f4511e;
-    border-radius: 25px;
-    color: white;
-    font-size: 65%;
-    margin-right: 45px;
-    padding: 10px 35px;
-    opacity: 0.6;
-    transition: 0.3s;
-    outline-style: none;
+button {
+  background-color: #f4511e;
+  border-radius: 25px;
+  color: white;
+  font-size: 65%;
+  margin-right: 45px;
+  padding: 10px 35px;
+  opacity: 0.6;
+  transition: 0.3s;
+  outline-style: none;
 }
 
-    
 button:hover {
-    opacity: 1
+  opacity: 1;
 }
 
-.input-wrapper{
-    width: 90%;
-    margin: 0 auto;
-    overflow: hidden;
+.fas {
+  background-color: #f4511e;
+  padding: 10px 25px;
+  border-radius: 20px;
 }
-input{
-    font-size: 80%;
-    text-align: center;
-    width: 100%;
-    margin: 10px auto;
+.checked {
+  background-color: green;
 }
 
-.result-section{
-    display: flex;
-    flex-flow: column wrap;
-
+.input-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.country-div{
-    border-radius: 20px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    margin: 5px auto;
-    text-align: center;
-    width: 60%;
+input {
+  font-size: 80%;
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+}
 
+.result-section {
+  display: flex;
+  flex-flow: column wrap;
+}
+.country-div {
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 5px auto;
+  text-align: center;
+  width: 60%;
 }
 
 /* span{
