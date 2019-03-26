@@ -6,13 +6,17 @@ const buttonAny = document.querySelector(".search-by-any");
 const resultSection = document.querySelector(".result-section");
 
 buttonInitial.addEventListener("click", function() {
-  buttonAny.classList.remove("checked");
-  this.classList.add("checked");
-  searchBox.addEventListener("keyup", searchCountriesByInitials);
-  searchCountriesByInitials();
+  
+  searchBox.focus();
+    buttonAny.classList.remove("checked");
+    this.classList.add("checked");
+    searchBox.addEventListener("keyup", searchCountriesByInitials);
+    searchCountriesByInitials();
+  
 });
 
 buttonAny.addEventListener("click", function() {
+  searchBox.focus();
   buttonInitial.classList.remove("checked");
   this.classList.add("checked");
   searchBox.addEventListener("keyup", searchByAny);
