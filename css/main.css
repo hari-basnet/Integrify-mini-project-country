@@ -28,9 +28,10 @@ body {
 }
 
 button {
-  background-color: #f4511e;
+  background-color: #E6C091;
+  border: 2px solid white;
   border-radius: 25px;
-  color: white;
+  color: rgb(28, 46, 240);
   font-size: 65%;
   margin-right: 45px;
   padding: 10px 35px;
@@ -44,8 +45,10 @@ button:hover {
 }
 
 .fas {
-  background-color: #f4511e;
+  background-color: #E6C091;
   padding: 10px 25px;
+  border: 2px solid white;
+  color: rgb(28, 46, 240);
   border-radius: 20px;
   opacity: 0.6;
   transition: 0.3s;
