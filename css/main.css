@@ -47,6 +47,12 @@ button:hover {
   background-color: #f4511e;
   padding: 10px 25px;
   border-radius: 20px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.fas:hover{
+  opacity: 1;
 }
 .checked {
   background-color: green;

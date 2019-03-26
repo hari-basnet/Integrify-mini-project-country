@@ -19,10 +19,11 @@ buttonAny.addEventListener("click", function() {
   searchByAny();
 });
 
+// adding action listener to the sort button
 const sortButton = document.querySelector(".fas");
 sortButton.addEventListener("click", function() {
   countries.reverse();
-  sortButton.classList.toggle("fa-sort-alpha-down");
+  // sortButton.classList.toggle("fa-sort-alpha-down");
   sortButton.classList.toggle("fa-sort-alpha-up");
 
   if (buttonInitial.classList.contains("checked")) {
@@ -59,11 +60,11 @@ function searchCountriesByInitials() {
   // FUNCTION GENERATEDIV ENDS
 }
 
-// console.log(searchCountriesByInitials());
-
 // this function filters country from array with any searchkey
 function searchByAny() {
+
   clearItems();
+
   const pattern = new RegExp(searchBox.value, "gi");
   const searchResult = countries.filter(country => {
     return country.toUpperCase().match(pattern);
@@ -102,31 +103,6 @@ function clearItems() {
   });
 }
 
-// Action listeners
-// searchBox.addEventListener("keyup", searchCountriesByInitials);
-//searchBox.addEventListener("keyup", searchByAny);
-
-//console.log(displayCountries());
-
-//console.log(displayCountries());
-
-function sortCountries() {
-  return countries.reverse();
-
-  // // target where you wanna put the created box
-  // searchResult.forEach(element => {
-  //   // create new divs
-  //   const resultDiv = document.createElement("div");
-  //   resultDiv.setAttribute("class", "country-div");
-  //   resultDiv.style.backgroundColor = generateRGB();
-
-  //   const resultSpan = document.createElement("span");
-  //   resultSpan.textContent = element;
-
-  //   // append created child to result section
-  //   resultDiv.appendChild(resultSpan);
-  //   resultSection.appendChild(resultDiv);
-  //});
-}
-
-// displayCountries();
+// function sortCountries() {
+//   return countries.reverse();
+// }
